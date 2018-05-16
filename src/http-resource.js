@@ -178,6 +178,10 @@ export default class WebDAVResource extends Resource {
 
   get isHTTPResource() { return true; }
 
+  isSameDomain() {
+    return typeof document !== 'undefined' && this.url.startsWith(document.location.origin + '/');
+  }
+
   join(path) {
     return Object.assign(
       super.join(path),
