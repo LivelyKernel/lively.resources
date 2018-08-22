@@ -265,7 +265,7 @@ export default class Resource {
     return this.write(pretty ? JSON.stringify(obj, null, 2) : JSON.stringify(obj));
   }
 
-  async readJson(obj) { return JSON.parse(await this.read()); }
+  async readJson() { return JSON.parse(await this.read()); }
 
   // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
   // serialization
